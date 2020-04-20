@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Roulette</title>
+</head>
+<body>
+
+<main class="container text-center d-flex">
+	<div class="row m-auto">
+		<div class="col-sm-12">
+			<header class="mb-5">
+				<h1>Roulette Game</h1>
+			</header>
+			
+			<section id="roulette">
+				<div class="cont">
+					<img id="roulette-empty" src="assets/roulette_empty.png" alt="Empty Roulette Board">
+					<img id="roulette-spin" src="assets/roulette_board.png" alt="Roulette Board Spinner">
+					<img id="roulette-handle" src="assets/roulette_handles.png" alt="Roulette Board Handles">
+				</div>
+			</section>
+			
+			<section class="mt-5">
+				<button class="btn btn-danger">Red</button>
+				<button class="btn btn-success">0</button>
+				<button class="btn btn-info">Blue</button>
+			</section>
+		</div>
+	</div>
+</main>
+
+<script type="text/javascript">
+	const spinner = document.getElementById("roulette-spin");
+	const buttons = document.getElementsByTagName("button");
+	
+	for (const button of buttons) {
+		button.onclick = spinThatShit;
+	}
+	
+	function spinThatShit() {
+		spinner.style.transition = `all ${ randomIntFromInterval(500, 3000) }ms ease-out`;
+		spinner.style.transform = `rotate(${ randomIntFromInterval(360, 2520) }deg)`;
+	}
+	
+	function randomIntFromInterval(min, max) {
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+</script>
+</body>
+</html>

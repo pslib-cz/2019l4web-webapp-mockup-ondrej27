@@ -1,0 +1,30 @@
+body {
+    background: azure;
+}
+
+main {
+    height: 100vh;
+}
+
+#roulette {
+}
+
+#roulette .cont {
+    width: 500px;
+    height: 500px;
+    min-width: 300px;
+    min-height: 300px;
+    margin: auto;
+    position: relative;
+}
+
+#roulette .cont img {
+    width: 100%;
+}
+
+#roulette .cont #roulette-spin,
+#roulette .cont #roulette-handle {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
