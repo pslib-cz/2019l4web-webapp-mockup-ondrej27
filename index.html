@@ -37,10 +37,10 @@
 	const buttons = document.getElementsByTagName("button");
 	
 	for (const button of buttons) {
-		button.onclick = spinThatShit;
+		button.onclick = spinThat;
 	}
 	
-	function spinThatShit() {
+	function spinThat() {
 		spinner.style.transition = `all ${ randomIntFromInterval(500, 3000) }ms ease-out`;
 		spinner.style.transform = `rotate(${ randomIntFromInterval(360, 2520) }deg)`;
 	}
